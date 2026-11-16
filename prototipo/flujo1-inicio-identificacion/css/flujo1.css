@@ -11,17 +11,6 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.rol {
-  display: inline-block;
-  background: var(--fondo-suave);
-  color: var(--texto-suave);
-  font-size: 0.8rem;
-  font-weight: 700;
-  border-radius: 999px;
-  padding: 4px 12px;
-  margin: 0 0 12px;
-}
-
 .resultado { margin-top: 8px; }
 
 .alerta-sin-cuenta {
