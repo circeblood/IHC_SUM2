@@ -1,4 +1,4 @@
-# Registro actual de Falabella.com (caso original)
+# Registro actual de Falabella.com
 
 Aquí está la evidencia del problema. Tomamos capturas del formulario de registro de `falabella.com/falabella-cl/myaccount/registration` el 15 de noviembre de 2026, en vista de celular (375 × 812 px), y marcamos en rojo los problemas de interacción que el prototipo busca resolver. No copiamos el código, los estilos ni las imágenes del sitio, y las capturas se usan solo como material de análisis para la asignatura.
 
