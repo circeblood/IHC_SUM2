@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>P1 Bienvenida | Prototipo académico IHC</title>
+  <link rel="stylesheet" href="../compartido/css/base.css">
+  <link rel="stylesheet" href="css/flujo1.css">
+</head>
+<body>
+  <main class="pantalla">
+    <div class="barra">
+      <span></span>
+      <button class="enlace-boton" type="button" data-boton-escuchar aria-label="Escuchar las instrucciones de esta pantalla">🔊 Escuchar</button>
+    </div>
+
+    <div data-escuchar>
+      <h1>Crea tu cuenta en 5 pasos</h1>
+      <p class="instruccion">Te vamos a pedir tus datos de a uno. Puedes volver atrás cuando quieras sin perder lo que escribiste.</p>
+
+      <div class="tarjeta">
+        <strong>Vas a necesitar</strong>
+        <ul class="lista-simple">
+          <li>Tu correo electrónico</li>
+          <li>Tu celular</li>
+        </ul>
+        <p class="tiempo">Toma cerca de 5 minutos.</p>
+      </div>
+
+      <details class="ayuda">
+        <summary>¿Para qué piden mis datos?</summary>
+        <p>Los usamos para enviarte tus boletas y los avisos de tus compras. No los compartimos con otras personas.</p>
+      </details>
+    </div>
+
+    <div class="acciones">
+      <a class="boton boton-principal" href="p2-datos-personales.html">Comenzar</a>
+    </div>
+  </main>
+
+  <script src="../compartido/js/app.js"></script>
+  <script>App.iniciar();</script>
+</body>
+</html>

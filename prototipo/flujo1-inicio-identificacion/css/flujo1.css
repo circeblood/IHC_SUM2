@@ -1,0 +1,41 @@
+/* Estilos propios del flujo 1 (vista del asesor y bienvenida). */
+
+.vista-ipad { background: #DDE3EA; }
+
+.pantalla-ipad {
+  max-width: 720px;
+  margin: 24px auto;
+  min-height: auto;
+  border-radius: 28px;
+  border: 14px solid #2B2F36;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.rol {
+  display: inline-block;
+  background: var(--fondo-suave);
+  color: var(--texto-suave);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 4px 12px;
+  margin: 0 0 12px;
+}
+
+.resultado { margin-top: 8px; }
+
+.alerta-sin-cuenta {
+  background: var(--aviso-fondo);
+  border: 2px solid var(--aviso);
+  border-radius: var(--radio);
+  padding: 14px 16px;
+  margin-bottom: 16px;
+}
+.alerta-sin-cuenta strong { display: block; }
+
+.qr-caja { text-align: center; margin-bottom: 16px; }
+.qr-simulado { width: 200px; height: 200px; background: #fff; padding: 10px; border: 1px solid var(--borde); }
+.qr-simulado rect { fill: #1A1A1A; }
+.qr-nota { color: var(--texto-suave); font-size: 0.8rem; margin: 6px 0 0; }
+
+.tiempo { margin: 8px 0 0; font-weight: 700; }

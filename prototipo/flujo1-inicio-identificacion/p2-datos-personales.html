@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>P2 Paso 1, tus datos | Prototipo académico IHC</title>
+  <link rel="stylesheet" href="../compartido/css/base.css">
+  <link rel="stylesheet" href="css/flujo1.css">
+</head>
+<body>
+  <main class="pantalla">
+    <div class="barra">
+      <button class="enlace-boton" type="button" data-volver>← Volver</button>
+      <button class="enlace-boton" type="button" data-boton-escuchar aria-label="Escuchar las instrucciones de esta pantalla">🔊 Escuchar</button>
+    </div>
+    <div data-progreso></div>
+
+    <form id="form-datos">
+      <div data-escuchar>
+        <h1>Tus datos</h1>
+        <p class="instruccion">Escribe tu RUT, tu nombre y tus apellidos tal como aparecen en tu carnet.</p>
+      </div>
+
+      <div class="campo">
+        <label for="rut">RUT <span class="etiqueta-tipo">(obligatorio)</span></label>
+        <span class="ejemplo" id="ej-rut">Por ejemplo: 12.345.678-5</span>
+        <input id="rut" name="rut" autocomplete="off" aria-describedby="ej-rut err-rut">
+        <p class="mensaje-error" id="err-rut" role="alert"></p>
+        <details class="ayuda">
+          <summary>¿Dónde encuentro mi RUT?</summary>
+          <p>Está en tu carnet de identidad, arriba a la derecha. El número que va después del guion se llama dígito verificador y puede ser un número o la letra K.</p>
+        </details>
+      </div>
+
+      <div class="campo">
+        <label for="nombre">Nombre <span class="etiqueta-tipo">(obligatorio)</span></label>
+        <span class="ejemplo" id="ej-nombre">Por ejemplo: Rosa</span>
+        <input id="nombre" name="nombre" autocomplete="off" aria-describedby="ej-nombre err-nombre">
+        <p class="mensaje-error" id="err-nombre" role="alert"></p>
+      </div>
+
+      <div class="campo">
+        <label for="apellidos">Apellidos <span class="etiqueta-tipo">(obligatorio)</span></label>
+        <span class="ejemplo" id="ej-apellidos">Por ejemplo: González Pérez</span>
+        <input id="apellidos" name="apellidos" autocomplete="off" aria-describedby="ej-apellidos err-apellidos">
+        <p class="mensaje-error" id="err-apellidos" role="alert"></p>
+      </div>
+
+      <details class="ayuda">
+        <summary>¿Para qué piden mi RUT?</summary>
+        <p>Lo usamos para emitir tus boletas y para reconocerte cuando compres en la tienda. No lo compartimos con otras personas.</p>
+      </details>
+
+      <div class="acciones">
+        <button class="boton boton-principal" type="submit">Continuar</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="../compartido/js/app.js"></script>
+  <script src="../compartido/js/validaciones.js"></script>
+  <script src="js/flujo1.js"></script>
+  <script>Flujo1.pantallaDatosPersonales();</script>
+</body>
+</html>
