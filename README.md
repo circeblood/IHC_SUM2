@@ -1,6 +1,6 @@
 # IHC_SUM2: Asistente de Registro Guiado Accesible
 
-Evaluación sumativa de la Unidad 2 de **Interacción Humano Computador**, Ingeniería Informática, Universidad Mayor.
+Evaluación sumativa de la Unidad 2 de **Interacción Humano Computador**
 
 **Equipo:** Francisco Godoy, Carolina Vallejos y Eduardo Jaque
 **Profesora:** Yenny Alexandra Méndez
