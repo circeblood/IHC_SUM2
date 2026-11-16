@@ -1,6 +1,6 @@
 # Registro actual de Falabella.com
 
-Aquí está la evidencia del problema. Tomamos capturas del formulario de registro de `falabella.com/falabella-cl/myaccount/registration` el 15 de noviembre de 2026, en vista de celular (375 × 812 px), y marcamos en rojo los problemas de interacción que el prototipo busca resolver. No copiamos el código, los estilos ni las imágenes del sitio, y las capturas se usan solo como material de análisis para la asignatura.
+Aquí está la evidencia del problema. Tomamos capturas del formulario de registro de `falabella.com/falabella-cl/myaccount/registration` el 15 de noviembre de 2026, en vista de celular, y marcamos en rojo los problemas de interacción que el prototipo busca resolver. No copiamos el código, los estilos ni las imágenes del sitio, y las capturas se usan solo como material de análisis para la asignatura.
 
 La carpeta `capturas` tiene las tres imágenes originales, que muestran el encabezado con los primeros campos, la contraseña con el bloque de beneficios y los consentimientos con el botón "Regístrate". La carpeta `problemas_marcados` tiene las mismas imágenes con los problemas numerados, donde un recuadro marca un elemento puntual y una barra al costado izquierdo marca una sección completa.
 
