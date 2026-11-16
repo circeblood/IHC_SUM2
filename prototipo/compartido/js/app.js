@@ -26,9 +26,23 @@ const App = (() => {
     const aviso = document.createElement('div');
     aviso.className = 'aviso-academico';
     aviso.setAttribute('role', 'note');
-    aviso.innerHTML = '<strong>Prototipo académico IHC, Universidad Mayor.</strong> ' +
-      'No es un sitio de Falabella. Usa solo datos de ejemplo.';
+    aviso.innerHTML = '<strong>Sumativa N2</strong> F. Godoy / C. Vallejos / E. Jaque';
     document.body.prepend(aviso);
+
+    // encabezado de sección en las pantallas del celular (la vista del iPad tiene el suyo)
+    if (!document.body.classList.contains('vista-ipad')) {
+      const encabezado = document.createElement('div');
+      encabezado.className = 'encabezado-sitio';
+      encabezado.textContent = 'Crea tu cuenta';
+      aviso.after(encabezado);
+    }
+
+    // nota al pie para que el prototipo no se confunda con el sitio real
+    const nota = document.createElement('p');
+    nota.className = 'nota-prototipo';
+    nota.textContent = 'Prototipo académico de la asignatura Interacción Humano Computador, Universidad Mayor. ' +
+      'No es un sitio de Falabella. Usa solo datos de ejemplo.';
+    document.querySelector('main')?.after(nota);
   }
 
   function progreso(paso, total = 5) {
