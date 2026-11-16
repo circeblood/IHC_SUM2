@@ -1,11 +1,11 @@
-/* Validaciones reutilizables. Los mensajes explican cómo corregir, sin culpar al usuario. */
+// Validaciones reutilizables, los mensajes explican como corregir
 
 const Validaciones = {
   obligatorio(nombreCampo) {
     return valor => (valor ? null : `Falta completar ${nombreCampo}.`);
   },
 
-  /** RUT chileno con dígito verificador (módulo 11). Acepta con o sin puntos. */
+  // RUT con digito verificador modulo 11, acepta con o sin puntos
   rut(valor) {
     if (!valor) return 'Falta tu RUT. Lo encuentras en tu carnet de identidad.';
     const limpio = valor.replace(/\./g, '').replace(/\s/g, '').toUpperCase();

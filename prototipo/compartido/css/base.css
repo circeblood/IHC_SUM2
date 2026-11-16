@@ -1,6 +1,4 @@
-/* Estilos compartidos del prototipo de registro guiado.
-   Colores y tipografía cercanos al comercio del caso (gris oscuro, verde lima y Lato),
-   sin logo ni recursos de la marca. Base de 18 px, contraste AA y zonas táctiles de 48 px o más. */
+/* Estilos compartidos, base de 18 px y contraste AA */
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 
@@ -9,12 +7,12 @@
   --texto-suave: #666666;    /* 5,7:1 sobre blanco */
   --fondo: #FFFFFF;
   --fondo-suave: #F5F5F5;
-  --borde: #8C8C8C;          /* borde de campos, 3:1 o más */
+  --borde: #8C8C8C;          /* borde de campos, 3:1 o mas */
   --linea: #E0E0E0;
-  --accion: #333333;         /* botón principal y enlaces */
+  --accion: #333333;         /* boton principal y enlaces */
   --accion-oscura: #000000;
-  --acento: #AAD500;         /* verde lima: solo decorativo, nunca como color de texto sobre blanco */
-  --accion-fondo: #F4F9E1;   /* verde lima muy claro para selecciones y ayudas */
+  --acento: #AAD500;         /* solo decorativo, no usar como texto sobre blanco */
+  --accion-fondo: #F4F9E1;   /* fondo de selecciones y ayudas */
   --error: #C8102E;          /* 5,9:1 sobre blanco */
   --error-fondo: #FDECEE;
   --exito: #3D7B00;          /* 5,2:1 sobre blanco */
@@ -28,7 +26,7 @@
 
 * { box-sizing: border-box; }
 
-/* lo oculto con el atributo hidden queda oculto aunque tenga otro display */
+/* hidden siempre oculta, aunque la clase defina display */
 [hidden] { display: none !important; }
 
 html { font-size: 112.5%; } /* 18 px */
@@ -41,7 +39,7 @@ body {
   line-height: 1.5;
 }
 
-/* Banner superior del trabajo */
+/* Banner superior */
 .aviso-academico {
   background: var(--texto);
   color: #FFFFFF;
@@ -53,7 +51,7 @@ body {
 }
 .aviso-academico strong { color: var(--acento); }
 
-/* Encabezado simple de la sección, con la línea lima de las pestañas del sitio */
+/* Encabezado con linea lima */
 .encabezado-sitio {
   max-width: 480px;
   margin: 0 auto;
@@ -64,7 +62,7 @@ body {
   font-size: 1rem;
 }
 
-/* Nota legal discreta al pie de cada pantalla */
+/* Nota al pie */
 .nota-prototipo {
   max-width: 480px;
   margin: 0 auto;
@@ -86,7 +84,7 @@ body {
   flex-direction: column;
 }
 
-/* Barra superior: volver + escuchar */
+/* Volver y Escuchar */
 .barra {
   display: flex;
   justify-content: space-between;
@@ -154,7 +152,7 @@ h2 { font-weight: 900; }
   font-size: 0.9rem;
 }
 .mensaje-error::before { content: "⚠ "; }
-/* el mensaje se muestra aunque el input esté dentro de un grupo (prefijo +56 9, botón Ver) */
+/* Muestra el error aunque el input este dentro de un grupo */
 .campo:has(input[aria-invalid="true"]) .mensaje-error { display: block; }
 
 /* Ayuda contextual */

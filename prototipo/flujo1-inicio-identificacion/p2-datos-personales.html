@@ -10,13 +10,17 @@
 </head>
 <body>
   <main class="pantalla">
+    <!-- Volver y Escuchar los conecta App.iniciar -->
     <div class="barra">
       <button class="enlace-boton" type="button" data-volver>← Volver</button>
       <button class="enlace-boton" type="button" data-boton-escuchar aria-label="Escuchar las instrucciones de esta pantalla">🔊 Escuchar</button>
     </div>
+    <!-- App.iniciar dibuja aqui el indicador de pasos -->
     <div data-progreso></div>
 
+    <!-- Lo valida el JS del flujo, no envia datos -->
     <form id="form-datos">
+      <!-- Texto que lee el boton Escuchar -->
       <div data-escuchar>
         <h1>Tus datos</h1>
         <p class="instruccion">Escribe tu RUT, tu nombre y tus apellidos tal como aparecen en tu carnet.</p>
@@ -61,6 +65,7 @@
   <script src="../compartido/js/app.js"></script>
   <script src="../compartido/js/validaciones.js"></script>
   <script src="js/flujo1.js"></script>
+  <!-- Inicia la logica de esta pantalla -->
   <script>Flujo1.pantallaDatosPersonales();</script>
 </body>
 </html>

@@ -1,12 +1,10 @@
-/* Funciones compartidas del prototipo de registro guiado.
-   Todo ocurre en el navegador: no se envían datos a ningún servidor y
-   la información de prueba se guarda solo en sessionStorage. */
+// Base compartida del prototipo, no envia datos a ningun servidor
 
 const App = (() => {
   const CLAVE_ESTADO = 'registroGuiadoDemo';
   const CAMPOS_PROHIBIDOS = ['clave', 'claveRepetida']; // nunca se guardan
 
-  // ---------- estado de la sesión de prueba ----------
+  // Estado de prueba en sessionStorage
   function leer() {
     try { return JSON.parse(sessionStorage.getItem(CLAVE_ESTADO)) || {}; }
     catch { return {}; }
@@ -21,7 +19,7 @@ const App = (() => {
 
   function borrar() { sessionStorage.removeItem(CLAVE_ESTADO); }
 
-  // ---------- estructura común de cada pantalla ----------
+  // Agrega banner, encabezado y nota al pie
   function avisoAcademico() {
     const aviso = document.createElement('div');
     aviso.className = 'aviso-academico';
@@ -29,7 +27,7 @@ const App = (() => {
     aviso.innerHTML = '<strong>Sumativa N2</strong> F. Godoy / C. Vallejos / E. Jaque';
     document.body.prepend(aviso);
 
-    // encabezado de sección en las pantallas del celular (la vista del iPad tiene el suyo)
+    // La vista del iPad no lleva este encabezado
     if (!document.body.classList.contains('vista-ipad')) {
       const encabezado = document.createElement('div');
       encabezado.className = 'encabezado-sitio';
@@ -37,7 +35,6 @@ const App = (() => {
       aviso.after(encabezado);
     }
 
-    // nota al pie de todas las pantallas
     const nota = document.createElement('p');
     nota.className = 'nota-prototipo';
     nota.textContent = 'Prototipo de uso local';
@@ -57,7 +54,7 @@ const App = (() => {
       <div class="progreso-barra" aria-hidden="true">${segmentos}</div>`;
   }
 
-  // ---------- botón Escuchar (lectura en voz alta) ----------
+  // Lee en voz alta el bloque data-escuchar
   function escuchar(boton) {
     if (!('speechSynthesis' in window)) {
       boton.textContent = 'Audio no disponible en este navegador';
@@ -71,7 +68,6 @@ const App = (() => {
     speechSynthesis.speak(voz);
   }
 
-  // ---------- validación y mensajes ----------
   function marcarError(input, mensaje) {
     const caja = input.closest('.campo');
     const msg = caja.querySelector('.mensaje-error');
@@ -85,8 +81,7 @@ const App = (() => {
     input.closest('.campo').classList.add('ok');
   }
 
-  /** Recorre las reglas {input, validar(valor) => mensaje|null}.
-      Devuelve true si todo está correcto y lleva el foco al primer error. */
+  // Recibe reglas {input, validar} y deja el foco en el primer error
   function validar(reglas) {
     let primerError = null;
     for (const { input, validar } of reglas) {
@@ -98,7 +93,7 @@ const App = (() => {
     return !primerError;
   }
 
-  // ---------- inicio de cada pantalla ----------
+  // Se llama al cargar cada pantalla
   function iniciar({ paso } = {}) {
     avisoAcademico();
     progreso(paso);
@@ -106,7 +101,7 @@ const App = (() => {
       b.addEventListener('click', () => history.back()));
     document.querySelectorAll('[data-boton-escuchar]').forEach(b =>
       b.addEventListener('click', () => escuchar(b)));
-    // ningún formulario envía datos: se manejan con JavaScript en la misma página
+    // Los formularios se manejan con JS y nunca se envian
     document.querySelectorAll('form').forEach(f => f.setAttribute('novalidate', ''));
   }
 

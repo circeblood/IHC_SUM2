@@ -1,10 +1,9 @@
-/* Flujo 1: inicio en tienda e identificación del cliente (P0, P1 y P2).
-   Responsable: Francisco Godoy. */
+// Flujo 1 (P0 a P2), Francisco Godoy
 
 const Flujo1 = (() => {
   const SIGUIENTE_FLUJO = '../flujo2-contacto-verificacion/p3-contacto.html';
 
-  // Dibuja un QR decorativo (no escaneable): marcas de esquina y módulos fijos.
+  // QR decorativo, no se puede escanear
   function dibujarQrSimulado() {
     const g = document.getElementById('qr-modulos');
     const ns = 'http://www.w3.org/2000/svg';
@@ -31,7 +30,7 @@ const Flujo1 = (() => {
 
   function pantallaAsesor() {
     App.iniciar();
-    App.borrar(); // cada atención parte con una sesión de prueba limpia
+    App.borrar(); // cada atencion parte con sesion limpia
     const form = document.getElementById('form-buscar');
     const input = document.getElementById('rut-cliente');
     const resultado = document.getElementById('resultado');
@@ -39,7 +38,7 @@ const Flujo1 = (() => {
     form.addEventListener('submit', e => {
       e.preventDefault();
       if (!App.validar([{ input, validar: Validaciones.rut }])) return;
-      // En el prototipo todo RUT válido se trata como "sin cuenta" para mostrar el caso de estudio.
+      // En el prototipo todo RUT valido se trata como cliente sin cuenta
       App.guardar({ rut: Validaciones.formatearRut(input.value), origen: 'qr-tienda' });
       form.hidden = true;
       resultado.hidden = false;
@@ -62,7 +61,7 @@ const Flujo1 = (() => {
     const nombre = document.getElementById('nombre');
     const apellidos = document.getElementById('apellidos');
 
-    // El RUT llega precargado si el cliente vino desde el QR del asesor.
+    // El RUT llega precargado desde el QR
     rut.value = datos.rut || '';
     nombre.value = datos.nombre || '';
     apellidos.value = datos.apellidos || '';
