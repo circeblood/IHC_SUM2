@@ -37,11 +37,10 @@ const App = (() => {
       aviso.after(encabezado);
     }
 
-    // nota al pie para que el prototipo no se confunda con el sitio real
+    // nota al pie de todas las pantallas
     const nota = document.createElement('p');
     nota.className = 'nota-prototipo';
-    nota.textContent = 'Prototipo académico de la asignatura Interacción Humano Computador, Universidad Mayor. ' +
-      'No es un sitio de Falabella. Usa solo datos de ejemplo.';
+    nota.textContent = 'Prototipo de uso local';
     document.querySelector('main')?.after(nota);
   }
 

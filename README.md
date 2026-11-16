@@ -55,7 +55,7 @@ Para verlo como en un celular, usar las herramientas de desarrollo del navegador
 Como el prototipo rediseña el registro de una empresa real, tomamos estas precauciones para que no se confunda con el sitio original:
 
 - No usa el logo, los colores, los textos legales ni el código de Falabella. Todo se construyó desde cero.
-- Cada pantalla muestra un aviso fijo de prototipo académico y pide usar solo datos de ejemplo.
+- Cada pantalla muestra el banner de la sumativa con los integrantes del equipo y la nota "Prototipo de uso local" al pie.
 - Ningún formulario envía datos. Todo se maneja en el navegador y los datos de prueba se guardan solo en `sessionStorage`, que se borra al terminar.
 - La clave nunca se guarda, ni siquiera de forma temporal.
 - No se envían SMS reales. El código de verificación es simulado y aparece como la sugerencia que haría el teclado del teléfono.
