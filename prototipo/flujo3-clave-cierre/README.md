@@ -13,12 +13,12 @@
 
 ## Qué debe cumplir
 
-- Recibe al usuario desde `../flujo2-contacto-verificacion/p4-verificar-correo.html`.
+- Recibe al usuario desde `../flujo2-contacto-verificacion/p4-verificar-celular.html`.
 - Usa la base compartida (`../compartido/`). Lo propio del flujo va en `css/flujo3.css` y `js/flujo3.js`.
 - **P5.** Clave y repetición de la clave, con opción para mostrar u ocultar. Los requisitos se escriben en lenguaje simple y se marcan a medida que se cumplen (RU07). **La clave nunca se guarda**, ni siquiera en sessionStorage. Resuelve el problema 6 del caso original.
 - **P6.** Un solo consentimiento obligatorio, marcado con "(obligatorio)" y con un resumen en lenguaje simple, más uno opcional separado. Si falta el obligatorio, se explica por qué es necesario (RU04, RE01). Resuelve los problemas 8 y 9.
-- **P7.** Resumen por bloque con "Editar", que vuelve al paso correspondiente sin perder datos. Nada queda definitivo hasta tocar "Crear mi cuenta" (RF06, RE03).
-- **P8.** Confirmación explícita con nombre y correo, los beneficios de la cuenta (que se sacaron del formulario, problema 7) e "Ir a comprar". Al terminar se borran los datos de prueba (RF07, RE04).
+- **P7.** Resumen por bloque con "Editar" (incluye celular confirmado, correo opcional y canal elegido), que vuelve al paso correspondiente sin perder datos. Nada queda definitivo hasta tocar "Crear mi cuenta" (RF06, RE03).
+- **P8.** Confirmación explícita con el nombre, el celular con el que entra y el canal elegido para las boletas, los beneficios de la cuenta (que se sacaron del formulario, problema 7) e "Ir a comprar". Al terminar se borran los datos de prueba (RF07, RE04).
 - No se envía nada a ningún servidor.
 
 ## Requisitos del informe que demuestra
