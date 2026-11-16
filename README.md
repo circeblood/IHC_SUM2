@@ -41,7 +41,7 @@ Cada carpeta de flujo tiene su propio `README.md` con lo que hace y los requisit
 
 ## Cómo verlo
 
-Se puede abrir en local descargando el repositorio y abriendo `prototipo/index.html` en el navegador, sin instalar nada. También se publicará con GitHub Pages desde la rama `main`, y el enlace se agregará aquí cuando esté activo. Para verlo como en un celular, conviene usar las herramientas de desarrollo del navegador con un ancho de 375 px.
+Se puede abrir en local descargando el repositorio y abriendo `prototipo/index.html` en el navegador, sin instalar nada. También se publicará con GitHub Pages desde la rama `main`, y el enlace se agregará aquí cuando esté activo. Para verlo como en un celular, conviene usar las herramientas de desarrollo del navegador.
 
 ## Precauciones
 
